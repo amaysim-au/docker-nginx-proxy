@@ -1,15 +1,14 @@
 # docker-nginx-proxy
-An ECS based http(s) proxy
+An docker based http(s) proxy. Built on nginx:alpine.
 
-# Confuration
+# Configuration
+Environment Vars to configure the NGINX instance.
 
-## ENV Vars
-
-### PROXY_SCHEME
+## PROXY_SCHEME
 HTTP or HTTPS
 
-### PROXY_HOST
+## PROXY_HOST
 Hostname or IP of the proxy target
 
-### PROXY_PORT
+## PROXY_PORT
 Port of the proxy target
