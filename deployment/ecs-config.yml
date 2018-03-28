@@ -1,0 +1,8 @@
+---
+lb_health_check: /healthcheck.html
+lb_deregistration_delay: 60
+
+autoscaling: Enable
+autoscaling_target: 60
+autoscaling_min_size: 2
+autoscaling_max_size: 20

@@ -1,0 +1,27 @@
+{
+    "containerDefinitions": [
+        {
+            "essential": true,
+            "image": "isaacgittinsama/docker-nginx-proxy:latest",
+            "memoryReservation": 128,
+            "memory": 512,
+            "cpu": 256,
+            "name": "${ECS_APP_NAME}",
+            "portMappings": [
+                {
+                    "containerPort": 80
+                }
+            ],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "ecs-${ECS_APP_NAME}-${ENV}",
+                    "awslogs-region": "ap-southeast-2",
+                    "awslogs-stream-prefix": "${BUILD_VERSION}"
+                }
+            }
+        }
+    ],
+    "family": "${ECS_APP_NAME}-${ENV}",
+    "volumes": []
+}

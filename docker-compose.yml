@@ -6,3 +6,8 @@ services:
       - .env
     ports:
       - "9080:80"
+  ecs:
+    image: amaysim/ecs-utils:2.1.4
+    env_file: .env
+    volumes:
+      - .:/srv/app:Z
